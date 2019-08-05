@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+    <TargetFrameworks>net451;net472;netstandard2.0</TargetFrameworks>
+    <AssemblyName>Miris.Transactions</AssemblyName>
+    <RootNamespace>Miris.Transactions</RootNamespace>
+  </PropertyGroup>
+ 
+  <PropertyGroup>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="4.3.1" />
+  </ItemGroup>
+ 
+  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+</Project>

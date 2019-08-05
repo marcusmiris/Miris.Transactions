@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17C09F6C-B745-4FBC-9C47-CE17A32DA58B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miris.Transactions</RootNamespace>
+    <AssemblyName>Miris.Transactions.net451</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFRAMEWORK</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Transactions\AnonymousResourceManager.cs">
+      <Link>AnonymousResourceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\BreacherArrayProxy.cs">
+      <Link>Breacher\BreacherArrayProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\BreacherExtensions.cs">
+      <Link>Breacher\BreacherExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\BreacherProxy.cs">
+      <Link>Breacher\BreacherProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\EnlistmentProxy.cs">
+      <Link>netframework\Proxies\EnlistmentProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\EnlistmentStateProxy.cs">
+      <Link>netframework\Proxies\EnlistmentStateProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\InternalEnlistmentArrayProxy.cs">
+      <Link>netframework\Proxies\InternalEnlistmentArrayProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\InternalEnlistmentProxy.cs">
+      <Link>netframework\Proxies\InternalEnlistmentProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\InternalTransactionProxy.cs">
+      <Link>netframework\Proxies\InternalTransactionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\TransactionProxy.cs">
+      <Link>netframework\Proxies\TransactionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\TransactionScopeProxy.cs">
+      <Link>netframework\Proxies\TransactionScopeProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\VolatileEnlistmentSetProxy.cs">
+      <Link>netframework\Proxies\VolatileEnlistmentSetProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\netframework\Proxies\VolatileEnlistmentStateProxy.cs">
+      <Link>netframework\Proxies\VolatileEnlistmentStateProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\Breacher\SystemTransactionAssemblyProxy.cs">
+      <Link>Breacher\SystemTransactionAssemblyProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\EnlistmentExtensions.cs">
+      <Link>EnlistmentExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\EnlistmentState.cs">
+      <Link>EnlistmentState.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\ReflectionExtensions.cs">
+      <Link>ReflectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\StackOverflowRepair\StackOverflowFixer.cs">
+      <Link>StackOverflowRepair\StackOverflowFixer.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\TransactionExtensions.cs">
+      <Link>TransactionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Transactions\TransactionManagerExtensions.cs">
+      <Link>TransactionManagerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Transactions.net451\System.Transactions.net451.csproj">
+      <Project>{5f3dccb6-0df2-48ef-a9a9-2bae5f5714a8}</Project>
+      <Name>System.Transactions.net451</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
